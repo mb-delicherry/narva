@@ -117,6 +117,7 @@
   .hero h1 em{color:var(--yellow);font-style:normal}
   .hero p.lead{color:#dcecef;max-width:680px;width:100%;margin:0 auto 28px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .hero-cta .btn{flex:1;max-width:260px;text-align:center}
   .hero-trust{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap;justify-content:center}
   .hero-trust .t b{font-size:1.85rem;font-weight:800;color:var(--yellow);display:block;line-height:1.1}
   .hero-trust .t small{color:#bcd9de;font-size:.83rem}
@@ -149,11 +150,11 @@
   .usp b{display:block;font-size:1.2rem;font-weight:800;line-height:1.25;color:var(--ink);margin-bottom:7px}
   .usp small{font-size:1rem;font-weight:500;color:rgba(14,17,20,.65);line-height:1.4}
   @media(max-width:920px){.usps .wrap{grid-template-columns:1fr 1fr};.usps{padding:48px 0}}
-  @media(max-width:520px){.usps .wrap{grid-template-columns:1fr}}
 
   /* Logos bar — marquee */
   .logos{background:var(--bg-alt);border-bottom:1px solid var(--line);padding:22px 0}
   .logos-inner{display:flex;align-items:center;gap:32px;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  @media(max-width:600px){.logos-inner{flex-direction:column;align-items:flex-start;gap:14px}.logos-scroll{width:100%}}
   .logos-label{flex:0 0 auto;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
   .logos-scroll{flex:1;overflow:hidden;position:relative}
   .logos-scroll::before,.logos-scroll::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
