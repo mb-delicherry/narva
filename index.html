@@ -118,6 +118,7 @@
   .hero p.lead{color:#dcecef;max-width:680px;width:100%;margin:0 auto 28px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
   .hero-cta .btn{flex:1;max-width:260px;text-align:center}
+  @media(max-width:600px){.hero-cta{flex-direction:column;align-items:center}.hero-cta .btn{max-width:320px;width:100%}}
   .hero-trust{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap;justify-content:center}
   .hero-trust .t b{font-size:1.85rem;font-weight:800;color:var(--yellow);display:block;line-height:1.1}
   .hero-trust .t small{color:#bcd9de;font-size:.83rem}
@@ -138,7 +139,8 @@
   .hero-bcard-body li{display:flex;gap:12px;color:var(--ink);font-size:1.05rem;font-weight:400;align-items:flex-start}
   .hero-bcard-body li::before{content:"✓";color:var(--teal);font-weight:800;flex:0 0 auto}
   @media(max-width:920px){.hero .wrap{padding-block:50px 48px}.hero .lamp{display:none}
-    .hero-bcard{grid-template-columns:1fr}.hero-bcard img{height:200px}}
+    .hero-bcard{grid-template-columns:1fr}
+    .hero-bcard img{height:auto;width:100%;object-fit:contain;min-height:unset}}
   @media(max-width:600px){.hero h1{font-size:26px}}
 
   /* USP strip */
@@ -149,7 +151,8 @@
     display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-bottom:16px}
   .usp b{display:block;font-size:1.2rem;font-weight:800;line-height:1.25;color:var(--ink);margin-bottom:7px}
   .usp small{font-size:1rem;font-weight:500;color:rgba(14,17,20,.65);line-height:1.4}
-  @media(max-width:920px){.usps .wrap{grid-template-columns:1fr 1fr};.usps{padding:48px 0}}
+  @media(max-width:920px){.usps .wrap{grid-template-columns:1fr 1fr};.usps{padding:48px 0}
+    .usp-specialista{order:-1}.usp-expediacia{order:0}}
 
   /* Logos bar — marquee */
   .logos{background:var(--bg-alt);border-bottom:1px solid var(--line);padding:22px 0}
@@ -413,12 +416,12 @@
     <b>Okamžitá dostupnosť</b>
     <small>aj nedostatkového tovaru</small>
   </div>
-  <div class="usp">
+  <div class="usp usp-expediacia">
     <span class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></span>
     <b>Expedícia tovaru</b>
     <small>do 24 hodín</small>
   </div>
-  <div class="usp">
+  <div class="usp usp-specialista">
     <span class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></span>
     <b>Živý špecialista</b>
     <small>bez čakania na linke</small>
