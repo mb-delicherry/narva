@@ -639,9 +639,7 @@
         <li>Priamy kontakt na špecialistu, nie infolinka</li>
       </ul>
     </div>
-    <form class="card-form" id="b2b-form" novalidate
-      action="https://narva.ecomailapp.cz/public/subscribe/6/3fdfd544852ed7431aa64f3b9481afb9"
-      method="post" target="ecomail-target">
+    <form class="card-form" id="b2b-form" novalidate>
       <h3>Mám záujem o partnerské ceny</h3>
       <div class="sub">Polia označené <span style="color:#e03030">*</span> sú povinné.</div>
       <div class="frow">
@@ -662,11 +660,9 @@
         <label class="chk"><input type="checkbox" class="kategoria-chk" value="Autožiarovky"> Autožiarovky</label>
         <label class="chk"><input type="checkbox" class="kategoria-chk" value="Domáce a firemné svietidlá"> Domáce a firemné svietidlá</label>
       </div>
-      <input type="hidden" name="KATEGORIE" id="f-kategorie-hidden">
       <button class="btn" type="submit">Odoslať dopyt</button>
       <p class="form-note">Odoslaním súhlasíte so spracovaním údajov za účelom prípravy cenovej ponuky.</p>
     </form>
-    <iframe name="ecomail-target" style="display:none" title="ecomail"></iframe>
   </div>
 </section>
 
@@ -717,22 +713,34 @@
     hamburger.setAttribute('aria-expanded', false);
   }));
 
-  // ===== Odoslanie formulára do Ecomail =====
+  // ===== Odoslanie formulára do Ecomail (cez Netlify Function) =====
   const form = document.getElementById('b2b-form');
-  const ecomailFrame = document.querySelector('iframe[name="ecomail-target"]');
 
-  form.addEventListener('submit', (e) => {
-    if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); return; }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
 
-    // Spojí zaškrtnuté kategórie do jedného skrytého poľa pre Ecomail custom field "KATEGORIE"
     const kategorie = [...form.querySelectorAll('.kategoria-chk:checked')].map(c => c.value).join(', ');
-    document.getElementById('f-kategorie-hidden').value = kategorie;
 
     const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true; btn.textContent = 'Odosielam…';
 
-    // Formulár sa odošle natívne (action+target=iframe) priamo na Ecomail, mimo CORS obmedzení.
-    ecomailFrame.addEventListener('load', () => {
+    try {
+      const res = await fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name.value,
+          surname: form.surname.value,
+          company: form.company.value,
+          ico: form.ICO.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          kategorie
+        })
+      });
+      if (!res.ok) throw new Error('Server error');
+
       form.style.display = 'none';
       form.insertAdjacentHTML('afterend', `
         <div class="form-success">
@@ -740,7 +748,10 @@
           <h3>Ďakujeme, dopyt sme prijali</h3>
           <p>Špecialista na vašu oblasť vás kontaktuje do 24 pracovných hodín s ponukou partnerských cien.</p>
         </div>`);
-    }, { once: true });
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Odoslať dopyt';
+      alert('Odoslanie sa nepodarilo. Skúste to znova alebo nám zavolajte na 048 671 36 66.');
+    }
   });
 </script>
 
