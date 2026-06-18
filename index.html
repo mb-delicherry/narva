@@ -240,8 +240,9 @@
   .heureka-line{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
     border-radius:30px;padding:8px 18px;font-size:.9rem;font-weight:700;color:var(--ink);margin-top:18px}
   .heureka-line .stars{color:var(--yellow);letter-spacing:1px}
-  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;max-width:1340px;margin-left:auto;margin-right:auto}
-  .ref{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;flex-direction:column;height:100%}
+  .rgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:40px;max-width:1340px;margin-left:auto;margin-right:auto}
+  .rgrid .ref{flex:1 1 380px;max-width:420px}
+  .ref{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;flex-direction:column;min-height:260px}
   .ref .stars{color:var(--yellow);letter-spacing:2px;margin-bottom:10px}
   .ref p{flex:1}
   .ref .who{margin-top:26px}
@@ -255,7 +256,7 @@
   .ref .who span{font-size:.83rem;color:var(--muted)}
   .placeholder-tag{display:inline-block;margin-left:8px;background:#fdf3c8;color:#6e5708;font-size:.64rem;
     padding:2px 8px;border-radius:20px;vertical-align:middle;letter-spacing:.05em}
-  @media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+  @media(max-width:820px){.rgrid .ref{flex:1 1 100%}}
 
   /* Form */
   .formsec{background:linear-gradient(170deg,var(--teal-mid) 0%,var(--teal-deep) 100%);color:#fff}
@@ -607,6 +608,8 @@
       <div class="ref"><div class="stars">★★★★★</div><p>„Vyzdvihujem najmä rýchle dodanie tovaru, férové ceny a vynikajúcu komunikáciu. Každý obchod sme vždy vyriešili k obojstrannej spokojnosti, aj pri náročných projektoch či špeciálnych produktoch."</p><div class="who"><div class="av"><img src="ema.jpg" alt="EMA logo"></div><div><b>E.M.A. - ELEKTROMATERIÁL spol. s r.o.</b><span>Galanta</span></div></div></div>
       <div class="ref"><div class="stars">★★★★★</div><p>„So spoločnosťou SADN sme veľmi spokojní. Ich produkty sú kvalitné a spoľahlivé, presne podľa očakávaní našich zákazníkov. Profesionálny prístup, rýchla komunikácia a férové jednanie."</p><div class="who"><div class="av"><img src="JORVIK.png" alt="A-JORVIK logo"></div><div><b>A-JORVIK s.r.o.</b><span>Šamorín</span></div></div></div>
       <div class="ref"><div class="stars">★★★★★</div><p>„Najviac nám vyhovuje, že majú svoj vlastný pravidelný rozvoz a vedia poslať aj kuriérom. Skladom držia široký sortiment vo veľkých množstvách, čo nám neraz pomohlo pri vybavovaní klientov. Stabilná firma s potenciálom."</p><div class="who"><div class="av"><img src="elektro-antos.png" alt="ElektroAntoš logo"></div><div><b>Ing. Jakub Antoš <span style="font-weight:400">· ElektroAntoš s.r.o.</span></b><span>Vranov nad Topľou · odoberá 10+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Na spolupráci so spoločnosťou Narva nám najviac vyhovuje presnosť a spoľahlivosť dodávok. Spoluprácu jednoznačne odporúčame ďalším partnerom."</p><div class="who"><div><b>TD Slovakia, s.r.o.</b><span>Nové Mesto nad Váhom · odoberá od 2017</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Najviac nám vyhovuje dovoz a predaj priamo z auta. Aj počas obdobia covidu sme sa mohli spoľahnúť na dovoz tovaru. Spoľahlivosť je hlavný dôvod, prečo spoluprácu odporúčame."</p><div class="who"><div class="av"><img src="Slovex Alfa.png" alt="Slovex Alfa logo"></div><div><b>Slovex Alfa</b><span>Trenčín · odoberá 15+ rokov</span></div></div></div>
     </div>
     <div class="center" style="margin-top:42px"><a href="#formular" class="btn">Chcem partnerské ceny</a></div>
   </div>
