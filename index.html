@@ -156,16 +156,18 @@
 
   /* Logos bar — marquee */
   .logos{background:var(--bg-alt);border-bottom:1px solid var(--line);padding:22px 0}
-  .logos-inner{display:flex;align-items:center;gap:32px;max-width:var(--maxw);margin:0 auto;padding:0 22px}
-  @media(max-width:600px){.logos-inner{flex-direction:column;align-items:flex-start;gap:14px}.logos-scroll{width:100%}}
+  .logos-inner{display:flex;align-items:center;gap:24px;width:100%;margin:0;padding:0 22px}
+  @media(max-width:600px){.logos-inner{flex-direction:column;align-items:flex-start;gap:8px;padding:0 16px}.logos-scroll{width:100%}
+    .logos-label{font-size:.68rem}
+    .logos-track span{padding:0 8px;font-size:.46rem;letter-spacing:.2px}}
   .logos-label{flex:0 0 auto;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
   .logos-scroll{flex:1;overflow:hidden;position:relative}
   .logos-scroll::before,.logos-scroll::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
   .logos-scroll::before{left:0;background:linear-gradient(to right,var(--bg-alt),transparent)}
   .logos-scroll::after{right:0;background:linear-gradient(to left,var(--bg-alt),transparent)}
-  .logos-track{display:flex;width:max-content;animation:marquee 22s linear infinite}
+  .logos-track{display:flex;width:max-content;animation:marquee 55s linear infinite}
   .logos-track:hover{animation-play-state:paused}
-  .logos-track span{display:inline-block;padding:0 36px;font-weight:800;font-size:1.05rem;letter-spacing:2px;color:#9aa8af;white-space:nowrap}
+  .logos-track span{display:inline-block;padding:0 26px;font-weight:800;font-size:1.05rem;letter-spacing:2px;color:#9aa8af;white-space:nowrap}
   .logos-track span:hover{color:var(--teal-deep)}
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -238,13 +240,17 @@
   .heureka-line{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
     border-radius:30px;padding:8px 18px;font-size:.9rem;font-weight:700;color:var(--ink);margin-top:18px}
   .heureka-line .stars{color:var(--yellow);letter-spacing:1px}
-  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-  .ref{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;max-width:1340px;margin-left:auto;margin-right:auto}
+  .ref{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;flex-direction:column;height:100%}
   .ref .stars{color:var(--yellow);letter-spacing:2px;margin-bottom:10px}
+  .ref p{flex:1}
+  .ref .who{margin-top:26px}
   .ref p{color:var(--ink);font-size:.97rem;margin-bottom:16px}
   .ref .who{display:flex;align-items:center;gap:12px}
-  .ref .av{width:46px;height:46px;border-radius:50%;background:var(--teal-tint);color:var(--teal-deep);font-weight:800;
-    font-size:1.1rem;display:flex;align-items:center;justify-content:center}
+  .ref .av{width:46px;height:46px;border-radius:50%;color:var(--teal-deep);font-weight:800;
+    font-size:1.1rem;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto}
+  .ref .av:not(:has(img)){background:var(--teal-tint)}
+  .ref .av img{width:100%;height:100%;object-fit:cover;border-radius:50%}
   .ref .who b{display:block;font-size:.94rem;color:var(--ink)}
   .ref .who span{font-size:.83rem;color:var(--muted)}
   .placeholder-tag{display:inline-block;margin-left:8px;background:#fdf3c8;color:#6e5708;font-size:.64rem;
@@ -439,8 +445,8 @@
     <span class="logos-label">Dodávame značky</span>
     <div class="logos-scroll">
       <div class="logos-track">
-        <span>NARVA</span><span>PHILIPS</span><span>OSRAM</span><span>SYLVANIA</span><span>GE</span><span>MTA</span><span>VOSLA</span><span>ORBITEC</span>
-        <span>NARVA</span><span>PHILIPS</span><span>OSRAM</span><span>SYLVANIA</span><span>GE</span><span>MTA</span><span>VOSLA</span><span>ORBITEC</span>
+        <span>SAD'N</span><span>BELLIGHT</span><span>NBB</span><span>LEDVANCE</span><span>ORBITEC</span><span>PATRON</span><span>THORGEON</span><span>OSRAM</span><span>PHILIPS</span><span>ORBITEC</span><span>AUTOLAMP</span><span>NARVA</span><span>PHILIPS</span><span>OSRAM</span><span>HELLA</span><span>VOSLA</span><span>MTA</span><span>WKK</span><span>SAD'N</span><span>ELED</span><span>IMP</span><span>TME</span><span>ANTICOR</span><span>SCAPA</span><span>SCHRINTECH</span>
+        <span>SAD'N</span><span>BELLIGHT</span><span>NBB</span><span>LEDVANCE</span><span>ORBITEC</span><span>PATRON</span><span>THORGEON</span><span>OSRAM</span><span>PHILIPS</span><span>ORBITEC</span><span>AUTOLAMP</span><span>NARVA</span><span>PHILIPS</span><span>OSRAM</span><span>HELLA</span><span>VOSLA</span><span>MTA</span><span>WKK</span><span>SAD'N</span><span>ELED</span><span>IMP</span><span>TME</span><span>ANTICOR</span><span>SCAPA</span><span>SCHRINTECH</span>
       </div>
     </div>
   </div>
@@ -592,18 +598,15 @@
 
 <!-- REFERENCES -->
 <section class="alt">
-  <div class="wrap">
+  <div class="wrap" style="max-width:1340px">
     <div class="center"><span class="eyebrow">Referencie</span><h2>Partneri, ktorí u nás odoberajú roky</h2>
       <p>Nie sme len e-shop, sme partner, ktorému veria autoservisy, elektrikári aj veľkoodberatelia po celom Slovensku.</p>
       <div class="heureka-line"><span class="stars">★★★★★</span> 4,8 na Heureke · 100 % zákazníkov odporúča</div>
     </div>
     <div class="rgrid">
-      <div class="ref"><div class="stars">★★★★★</div><p>„Objednávam ráno, na druhý deň to mám na predajni. Za roky spolupráce nás Narva nenechala v štichu ani raz."</p><div class="who"><div class="av">A</div><div><b>Meno Priezvisko <span class="placeholder-tag">doplniť</span></b><span>Firma · odoberá X rokov</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Reklamáciu vybavili do dvoch dní bez zbytočných rečí. Presne to od dodávateľa potrebujem."</p><div class="who"><div class="av">B</div><div><b>Meno Priezvisko <span class="placeholder-tag">doplniť</span></b><span>Firma · odoberá X rokov</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Majú aj typy, ktoré nikde inde nezoženiem. Jeden dodávateľ na celý sortiment mi šetrí hromadu času."</p><div class="who"><div class="av">C</div><div><b>Meno Priezvisko <span class="placeholder-tag">doplniť</span></b><span>Firma · odoberá X rokov</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Vždy sa dovolám a vždy mi poradia. To pri inom dodávateľovi nemám."</p><div class="who"><div class="av">D</div><div><b>Meno Priezvisko <span class="placeholder-tag">doplniť</span></b><span>Firma · odoberá X rokov</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Ceny pri väčšom odbere sú naozaj konkurenčné a rozvoz po celom Slovensku je pre nás kľúčový."</p><div class="who"><div class="av">E</div><div><b>Meno Priezvisko <span class="placeholder-tag">doplniť</span></b><span>Firma · odoberá X rokov</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Spolupráca nie sú len objednávky, sú za tým ľudia. Aj spoločné akcie a výlety. To buduje dôveru."</p><div class="who"><div class="av">F</div><div><b>Meno Priezvisko <span class="placeholder-tag">doplniť</span></b><span>Firma · odoberá X rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Vyzdvihujem najmä rýchle dodanie tovaru, férové ceny a vynikajúcu komunikáciu. Každý obchod sme vždy vyriešili k obojstrannej spokojnosti, aj pri náročných projektoch či špeciálnych produktoch."</p><div class="who"><div class="av"><img src="ema.jpg" alt="EMA logo"></div><div><b>E.M.A. - ELEKTROMATERIÁL spol. s r.o.</b><span>Galanta</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„So spoločnosťou SADN sme veľmi spokojní. Ich produkty sú kvalitné a spoľahlivé, presne podľa očakávaní našich zákazníkov. Profesionálny prístup, rýchla komunikácia a férové jednanie."</p><div class="who"><div class="av"><img src="JORVIK.png" alt="A-JORVIK logo"></div><div><b>A-JORVIK s.r.o.</b><span>Šamorín</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Najviac nám vyhovuje, že majú svoj vlastný pravidelný rozvoz a vedia poslať aj kuriérom. Skladom držia široký sortiment vo veľkých množstvách, čo nám neraz pomohlo pri vybavovaní klientov. Stabilná firma s potenciálom."</p><div class="who"><div class="av"><img src="elektro-antos.png" alt="ElektroAntoš logo"></div><div><b>Ing. Jakub Antoš <span style="font-weight:400">· ElektroAntoš s.r.o.</span></b><span>Vranov nad Topľou · odoberá 10+ rokov</span></div></div></div>
     </div>
     <div class="center" style="margin-top:42px"><a href="#formular" class="btn">Chcem partnerské ceny</a></div>
   </div>
