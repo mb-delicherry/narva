@@ -252,6 +252,9 @@
     font-size:1.1rem;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto}
   .ref .av:not(:has(img)){background:var(--teal-tint)}
   .ref .av img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .ref .av.av-square{border-radius:0;width:auto;height:30px}
+  .ref .av.av-square img{width:auto;height:100%;object-fit:contain;border-radius:0}
+  .ref .av.av-square.av-xs{height:22px}
   .ref .who b{display:block;font-size:.94rem;color:var(--ink)}
   .ref .who span{font-size:.83rem;color:var(--muted)}
   .placeholder-tag{display:inline-block;margin-left:8px;background:#fdf3c8;color:#6e5708;font-size:.64rem;
@@ -285,7 +288,8 @@
   .form-success{text-align:center;padding:28px 8px}
   .form-success .ok{width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;font-size:1.7rem;
     display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
-  .form-success h3{color:var(--ink);margin-bottom:8px}
+  .form-success h3{color:#fff;margin-bottom:8px}
+  .form-success p{color:#fff}
   @media(max-width:860px){.formwrap{grid-template-columns:1fr;gap:30px}.frow{grid-template-columns:1fr}}
 
   /* FAQ */
@@ -605,12 +609,17 @@
       <div class="heureka-line"><span class="stars">★★★★★</span> 4,8 na Heureke · 100 % zákazníkov odporúča</div>
     </div>
     <div class="rgrid">
-      <div class="ref"><div class="stars">★★★★★</div><p>„Vyzdvihujem najmä rýchle dodanie tovaru, férové ceny a vynikajúcu komunikáciu. Každý obchod sme vždy vyriešili k obojstrannej spokojnosti, aj pri náročných projektoch či špeciálnych produktoch."</p><div class="who"><div class="av"><img src="ema.jpg" alt="EMA logo"></div><div><b>E.M.A. - ELEKTROMATERIÁL spol. s r.o.</b><span>Galanta</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„So spoločnosťou SADN sme veľmi spokojní. Ich produkty sú kvalitné a spoľahlivé, presne podľa očakávaní našich zákazníkov. Profesionálny prístup, rýchla komunikácia a férové jednanie."</p><div class="who"><div class="av"><img src="JORVIK.png" alt="A-JORVIK logo"></div><div><b>A-JORVIK s.r.o.</b><span>Šamorín</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Vyzdvihujem najmä rýchle dodanie tovaru, férové ceny a vynikajúcu komunikáciu. Každý obchod sme vždy vyriešili k obojstrannej spokojnosti, aj pri náročných projektoch či špeciálnych produktoch."</p><div class="who"><div class="av av-square"><img src="ema.jpg" alt="EMA logo"></div><div><b>E.M.A. - ELEKTROMATERIÁL spol. s r.o.</b><span>Galanta</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„So spoločnosťou SADN sme veľmi spokojní. Ich produkty sú kvalitné a spoľahlivé, presne podľa očakávaní našich zákazníkov. Profesionálny prístup, rýchla komunikácia a férové jednanie."</p><div class="who"><div class="av av-square av-xs"><img src="JORVIK.png" alt="A-JORVIK logo"></div><div><b>A-JORVIK s.r.o.</b><span>Šamorín</span></div></div></div>
       <div class="ref"><div class="stars">★★★★★</div><p>„Najviac nám vyhovuje, že majú svoj vlastný pravidelný rozvoz a vedia poslať aj kuriérom. Skladom držia široký sortiment vo veľkých množstvách, čo nám neraz pomohlo pri vybavovaní klientov. Stabilná firma s potenciálom."</p><div class="who"><div class="av"><img src="elektro-antos.png" alt="ElektroAntoš logo"></div><div><b>Ing. Jakub Antoš <span style="font-weight:400">· ElektroAntoš s.r.o.</span></b><span>Vranov nad Topľou · odoberá 10+ rokov</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Na spolupráci so spoločnosťou Narva nám najviac vyhovuje presnosť a spoľahlivosť dodávok. Spoluprácu jednoznačne odporúčame ďalším partnerom."</p><div class="who"><div><b>TD Slovakia, s.r.o.</b><span>Nové Mesto nad Váhom · odoberá od 2017</span></div></div></div>
-      <div class="ref"><div class="stars">★★★★★</div><p>„Najviac nám vyhovuje dovoz a predaj priamo z auta. Aj počas obdobia covidu sme sa mohli spoľahnúť na dovoz tovaru. Spoľahlivosť je hlavný dôvod, prečo spoluprácu odporúčame."</p><div class="who"><div class="av"><img src="Slovex Alfa.png" alt="Slovex Alfa logo"></div><div><b>Slovex Alfa</b><span>Trenčín · odoberá 15+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Na spolupráci so spoločnosťou Narva nám najviac vyhovuje presnosť a spoľahlivosť dodávok. Spoluprácu jednoznačne odporúčame ďalším partnerom."</p><div class="who"><div><b>TD Slovakia, s.r.o.</b><span>Nové Mesto nad Váhom · odoberá 9+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Najviac nám vyhovuje dovoz a predaj priamo z auta. Aj počas obdobia covidu sme sa mohli spoľahnúť na dovoz tovaru. Spoľahlivosť je hlavný dôvod, prečo spoluprácu odporúčame."</p><div class="who"><div class="av av-square"><img src="Slovex Alfa.png" alt="Slovex Alfa logo"></div><div><b>Slovex Alfa</b><span>Trenčín · odoberá 15+ rokov</span></div></div></div>
       <div class="ref"><div class="stars">★★★★★</div><p>„S firmou je vynikajúca komunikácia, či telefonicky, alebo osobne. Tovar rozvážajú 1x do týždňa, ale keď potrebujeme niečo súrne, posielajú kuriérom. Odporúčam na základe výborných cien, kvalitného tovaru a rýchleho dodania."</p><div class="who"><div><b>Ing. Dušan Nociar <span style="font-weight:400">· PROMaR</span></b><span>Poltár · odoberá 20+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Najviac oceňujem ochotu vyjsť v ústrety a bezproblémovú komunikáciu. Reklamácie vybavujú rýchlo a spoľahlivo."</p><div class="who"><div><b>Martin Černák <span style="font-weight:400">· AUTOTECH</span></b><span>Helpa · odoberá 18+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Vyhovuje nám široký sortiment a rýchle dodanie. Pomohli nám aj pri výbere LED žiaroviek. Dobrá spolupráca, určite odporúčame."</p><div class="who"><div><b>JES-CAR, s.r.o.</b><span>Humenné · odoberá 18+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Tovar si môžeme vybrať podľa potreby priamo z auta, čo nám výrazne uľahčuje prácu. Rýchle dodanie pre servis a široký výber tovaru sú dôvody, prečo spoluprácu odporúčame."</p><div class="who"><div class="av av-square"><img src="Orion AUTO.png" alt="ORION AUTO logo"></div><div><b>Dušan Demjan <span style="font-weight:400">· ORION AUTO, s.r.o.</span></b><span>Humenné · odoberá 20+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Komunikácia s firmou je na vysokej úrovni, oceňujem ich prístup. Pomohli nám aj pri výbere špeciálnych žiaroviek. Majú široký sortiment a ich služby budeme využívať naďalej."</p><div class="who"><div class="av av-square"><img src="Montúr.png" alt="MONTRÚR logo"></div><div><b>MONTRÚR s.r.o.</b><span>Košice · odoberá 18+ rokov</span></div></div></div>
+      <div class="ref"><div class="stars">★★★★★</div><p>„Spoločnosť SAD, s.r.o. sa preukázala ako spoľahlivý a profesionálny obchodný partner. Oceňujeme najmä široký sortiment svetelných zdrojov vrátane starších a ťažšie dostupných modelov. Mimoriadne si ceníme ich pomoc počas pandémie COVID-19, keď nám operatívne pomohli zabezpečiť nedostatkový tovar."</p><div class="who"><div class="av av-square"><img src="Elbea.png" alt="ELBEA logo"></div><div><b>Martin Kotula <span style="font-weight:400">· ELBEA s.r.o.</span></b><span>Bratislava · odoberá 18+ rokov</span></div></div></div>
     </div>
     <div class="center" style="margin-top:42px"><a href="#formular" class="btn">Chcem partnerské ceny</a></div>
   </div>
@@ -630,30 +639,34 @@
         <li>Priamy kontakt na špecialistu, nie infolinka</li>
       </ul>
     </div>
-    <form class="card-form" id="b2b-form" novalidate>
+    <form class="card-form" id="b2b-form" novalidate
+      action="https://narva.ecomailapp.cz/public/subscribe/6/3fdfd544852ed7431aa64f3b9481afb9"
+      method="post" target="ecomail-target">
       <h3>Mám záujem o partnerské ceny</h3>
       <div class="sub">Polia označené <span style="color:#e03030">*</span> sú povinné.</div>
       <div class="frow">
-        <div class="field"><label for="f-meno">Meno <span class="req">*</span></label><input id="f-meno" name="meno" type="text" placeholder="Ján" autocomplete="given-name" required></div>
-        <div class="field"><label for="f-priezvisko">Priezvisko <span class="req">*</span></label><input id="f-priezvisko" name="priezvisko" type="text" placeholder="Novák" autocomplete="family-name" required></div>
+        <div class="field"><label for="f-meno">Meno <span class="req">*</span></label><input id="f-meno" name="name" type="text" placeholder="Ján" autocomplete="given-name" required></div>
+        <div class="field"><label for="f-priezvisko">Priezvisko <span class="req">*</span></label><input id="f-priezvisko" name="surname" type="text" placeholder="Novák" autocomplete="family-name" required></div>
       </div>
       <div class="frow">
-        <div class="field"><label for="f-firma">Firma <span class="req">*</span></label><input id="f-firma" name="firma" type="text" placeholder="Autoservis Novák s.r.o." autocomplete="organization" required></div>
-        <div class="field"><label for="f-ico">IČO <span class="req">*</span></label><input id="f-ico" name="ico" type="text" placeholder="12345678" inputmode="numeric" pattern="[0-9 ]{6,10}" required></div>
+        <div class="field"><label for="f-firma">Firma <span class="req">*</span></label><input id="f-firma" name="company" type="text" placeholder="Autoservis Novák s.r.o." autocomplete="organization" required></div>
+        <div class="field"><label for="f-ico">IČO <span class="req">*</span></label><input id="f-ico" name="ICO" type="text" placeholder="12345678" inputmode="numeric" pattern="[0-9 ]{6,10}" required></div>
       </div>
       <div class="frow">
         <div class="field"><label for="f-email">E-mail <span class="req">*</span></label><input id="f-email" name="email" type="email" placeholder="jan@firma.sk" autocomplete="email" required></div>
-        <div class="field"><label for="f-tel">Telefón <span class="req">*</span></label><input id="f-tel" name="telefon" type="tel" placeholder="+421 9xx xxx xxx" autocomplete="tel" required></div>
+        <div class="field"><label for="f-tel">Telefón <span class="req">*</span></label><input id="f-tel" name="phone" type="tel" placeholder="+421 9xx xxx xxx" autocomplete="tel" required></div>
       </div>
       <label style="font-size:.83rem;font-weight:700;display:block;margin:4px 0 8px">Aké kategórie odoberáte? (môžete vybrať viac)</label>
       <div class="cats-pick">
-        <label class="chk"><input type="checkbox" name="kategorie" value="autoelektro"> Autoelektro a auto-moto príslušenstvo</label>
-        <label class="chk"><input type="checkbox" name="kategorie" value="autoziarovky"> Autožiarovky</label>
-        <label class="chk"><input type="checkbox" name="kategorie" value="svietidla"> Domáce a firemné svietidlá</label>
+        <label class="chk"><input type="checkbox" class="kategoria-chk" value="Autoelektro a auto-moto príslušenstvo"> Autoelektro a auto-moto príslušenstvo</label>
+        <label class="chk"><input type="checkbox" class="kategoria-chk" value="Autožiarovky"> Autožiarovky</label>
+        <label class="chk"><input type="checkbox" class="kategoria-chk" value="Domáce a firemné svietidlá"> Domáce a firemné svietidlá</label>
       </div>
+      <input type="hidden" name="KATEGORIE" id="f-kategorie-hidden">
       <button class="btn" type="submit">Odoslať dopyt</button>
       <p class="form-note">Odoslaním súhlasíte so spracovaním údajov za účelom prípravy cenovej ponuky.</p>
     </form>
+    <iframe name="ecomail-target" style="display:none" title="ecomail"></iframe>
   </div>
 </section>
 
@@ -704,31 +717,30 @@
     hamburger.setAttribute('aria-expanded', false);
   }));
 
-  // ===== Odoslanie formulára =====
-  // TODO pred nasadením: napojiť na reálny endpoint (Upgates formulár / Make webhook / vlastný backend).
-  // Stačí odkomentovať fetch nižšie a doplniť URL — dáta sa posielajú ako FormData.
+  // ===== Odoslanie formulára do Ecomail =====
   const form = document.getElementById('b2b-form');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
+  const ecomailFrame = document.querySelector('iframe[name="ecomail-target"]');
+
+  form.addEventListener('submit', (e) => {
+    if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); return; }
+
+    // Spojí zaškrtnuté kategórie do jedného skrytého poľa pre Ecomail custom field "KATEGORIE"
+    const kategorie = [...form.querySelectorAll('.kategoria-chk:checked')].map(c => c.value).join(', ');
+    document.getElementById('f-kategorie-hidden').value = kategorie;
 
     const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true; btn.textContent = 'Odosielam…';
 
-    try {
-      // const res = await fetch('https://VAS-ENDPOINT.sk/b2b-registracia', { method: 'POST', body: new FormData(form) });
-      // if (!res.ok) throw new Error('Server error');
-
-      form.innerHTML = `
+    // Formulár sa odošle natívne (action+target=iframe) priamo na Ecomail, mimo CORS obmedzení.
+    ecomailFrame.addEventListener('load', () => {
+      form.style.display = 'none';
+      form.insertAdjacentHTML('afterend', `
         <div class="form-success">
           <div class="ok">✓</div>
           <h3>Ďakujeme, dopyt sme prijali</h3>
           <p>Špecialista na vašu oblasť vás kontaktuje do 24 pracovných hodín s ponukou partnerských cien.</p>
-        </div>`;
-    } catch (err) {
-      btn.disabled = false; btn.textContent = 'Odoslať dopyt';
-      alert('Odoslanie sa nepodarilo. Skúste to znova alebo nám zavolajte na 048 671 36 66.');
-    }
+        </div>`);
+    }, { once: true });
   });
 </script>
 
